@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Auti</title>
+</head>
+<h1> Auti</h1>
+
+<table class="table table-dark">
+    <thead>
+    <tr>
+        <td>Time</td>
+        <td>Amount</td>
+        <td>Currency</td>
+        <td>Target_Currency</td>
+        <td>Rate</td>
+        <td>Conversion</td>
+    </tr>
+    </thead>
+    <tbody>
+    {% for element in data %}
+        <tr>
+            <td> {{ element[0] }} </td>
+            <td> {{ element[1] }}</td>
+            <td> {{ element[2] }} </td>
+            <td> {{ element[3] }} </td>
+            <td> {{ element[4] }} </td>
+            <td> {{ element[5] }} </td>
+
+        </tr>
+    {% endfor %}
+</tbody>
+</table>
+</body>
+</html>

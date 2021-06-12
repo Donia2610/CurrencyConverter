@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: auti
+  labels:
+    name: auti
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: auti
+  template:
+    metadata:
+      labels:
+        name: auti
+    spec:
+      containers:
+      - name: auti
+        image: aishy/auti
+        ports:
+        - containerPort: 5000
+      hostname: auti

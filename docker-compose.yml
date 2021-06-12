@@ -1,0 +1,20 @@
+version: "3.3"
+services:
+  site:
+    build: ./backend
+    hostname: backend
+    network_mode: host
+    ports:
+      - "5000:5000"
+  site1:
+    build: ./frontend
+    hostname: frontend
+    ports:
+      - "7000:5000"
+  site2:
+    build: ./Auti
+    hostname: Auti
+    ports:
+      - "6000:5000"
+  redis:
+    image: "redis:alpine"
